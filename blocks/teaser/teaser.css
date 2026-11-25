@@ -1,0 +1,74 @@
+.teaser {
+  display: grid;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.teaser .teaser-image {
+  min-width: 0;
+}
+
+.teaser .teaser-image picture {
+  display: block;
+  aspect-ratio: 16 / 9;
+}
+
+.teaser .teaser-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teaser .teaser-content {
+  align-self: center;
+  padding: 24px;
+}
+
+.teaser .teaser-content > div > :first-child {
+  margin-top: 0;
+}
+
+.teaser .teaser-content > div > :last-child {
+  margin-bottom: 0;
+}
+
+.teaser .teaser-content a {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: #005fcc;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.teaser .teaser-content a:hover {
+  background-color: #004a9f;
+  text-decoration: underline;
+}
+
+.teaser .teaser-content a:focus-visible {
+  outline: 2px solid #222;
+  outline-offset: 3px;
+}
+
+@media (width >= 900px) {
+  .teaser {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .teaser .teaser-image picture {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .teaser .teaser-image img {
+    min-height: 300px;
+  }
+
+  .teaser .teaser-content {
+    padding: 32px;
+  }
+}
