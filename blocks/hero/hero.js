@@ -4,7 +4,7 @@ export default function decorate(block) {
   const image = picture?.querySelector('img');
   const content = contentRow?.firstElementChild;
   const altText = altRow?.textContent.trim();
-
+console.log(content);
   if (image && altText) image.alt = altText;
 
   block.replaceChildren();
